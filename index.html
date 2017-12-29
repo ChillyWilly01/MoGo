@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MoGo</title>
-  <link rel="stylesheet" href="css/main.css">
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="libs/font-awesome/css/fontawesome.min.css">
+  <script src="libs/jquery/jquery-3.2.1.min.js"></script>
   <script src="index.js"></script>
 </head>
 <body>
@@ -15,8 +16,47 @@
     <header>
   <div class="container">
     <div class="top_menu">
-      <p class="logo">mo<span>g</span>o</p>
-
+      <div class="logo">
+        <p class="logo_main">mo<span>g</span>o</p>
+      </div>
+      <nav class="menu_navigation">
+        <a href="#" class="menu_link">about</a>
+        <a href="#" class="menu_link">service</a>
+        <a href="#" class="menu_link">work</a>
+        <a href="#" class="menu_link">blog</a>
+        <a href="#" class="menu_link">contact</a>
+      </nav>
+      <nav class="m_menu_navigation">
+        <li><a href="#" class="menu_link">about</a></li>
+        <li><a href="#" class="menu_link">service</a></li>
+        <li><a href="#" class="menu_link">work</a></li>
+        <li><a href="#" class="menu_link">blog</a></li>
+        <li><a href="#" class="menu_link">contact</a></li>
+      </nav>
+      <div class="find_menu">
+        <a href="#" class="icon"><img src="pic/icons/shopping-cart.png" alt="No" class="icon_search"></a>
+        <a href="#" class="icon"><img src="pic/icons/magnifying-glass.png" alt="No" class="icon_basket"></a>
+      </div>
+    </div>
+    <div class="central_part">
+      <h2>Creative Template</h2>
+      <h1>welcome<br>to mogo</h1>
+      <hr class="header_line">
+      <button class="header_btn">Learn more</button>
+    </div>
+    <div class="item_button">
+      <div class="item">
+        <a href="#" class="item_hover"><span>01</span> Intro</a>
+      </div>
+      <div class="item">
+        <a href="#" class="item_hover"><span>02</span> Work</a>
+      </div>
+      <div class="item">
+        <a href="#" class="item_hover"><span>03</span> About</a>
+      </div>
+      <div class="item">
+        <a href="#" class="item_hover"><span>04</span> Contacts</a>
+      </div>
     </div>
   </div>
 </header>
@@ -25,5 +65,54 @@
 
   </div>
 
+  <script src="libs/font-awesome/js/fontawesome.min.js"></script>
+  <script>
+      // hover item_menu
+
+      // $(".item").mouseenter(
+      //     function(){
+      //         $(this).find(".red_line").animate({width:'0px', color:'red'},'slow')
+      //     });
+      // $(".item").mouseleave(
+      //     function() {
+      //         $(this).find(".red_line").animate({width:'272px', color:'red'},'slow')
+      //     });
+      //
+      // //
+
+      // $(document).ready(function () {
+      //     $('.item_hover').mouseleave(function(event) {
+      //         $('.item_hover:before').stop().animate({
+      //             width: '272px',
+      //             color: 'red'
+      //         }, 500, function() {        //animation complete
+      //             $('.item').removeClass('hovered');
+      //         });
+      //     });
+      //     $('.item_hover').mouseover(function(event) {
+      //         $('.item_hover:before').stop().animate({
+      //             width: '172px',
+      //             color: 'red'
+      //         }, 300, function() {        //animation complete
+      //             $('.item_hover').addClass('hovered');
+      //         });
+      //     });
+      // });
+
+      // $(document).ready(function() {
+      //     $(".item").mouseover(function() {
+      //         var line = $(".item_hover").css("background-color", "red");
+      //         line.hide(1500).show(1500);
+      //         line.queue(function() {
+      //             line.css("background-color", "transparent");
+      //         });
+      //     });
+      //     $(".item").mouseleave(function() {
+      //         var line = $(".item_hover").css("background-color", "red");
+      //         line.hide(1500);
+      //     });
+      // });
+
+  </script>
 </body>
 </html>

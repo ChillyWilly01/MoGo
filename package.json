@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ChillyWilly01/MoGo#readme",
   "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
     "browser-sync": "^2.21.0",
     "gulp": "^3.9.1",
     "gulp-file-include": "^2.0.0",
