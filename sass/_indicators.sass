@@ -1,0 +1,33 @@
+.block_indicators
+  background-color: $turquoise-color
+
+.indicators
+  width: 100%
+  display: inline-block
+  columns: 5 auto
+  -moz-columns: 5 auto
+  -webkit-columns: 5 auto
+
+.cell
+  position: relative
+  text-align: center
+  padding: 35% 0
+  border-right: 1px solid $white-color
+  &:first-child
+    border-left: 1px solid $white-color
+  & span
+    position: relative
+    color: $white-color
+    font-family: Montserrat
+    font-size: 4.8rem
+    text-transform: uppercase
+
+  & p
+    position: relative
+    color: $white-color
+    font-size: 0.93rem
+    font-family: sans-serif
+    font-weight: 400
+    text-transform: uppercase
+    line-height: 30px
+
