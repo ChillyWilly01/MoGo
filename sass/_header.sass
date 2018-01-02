@@ -3,7 +3,7 @@ header
   background-repeat: no-repeat
   background-position: center
   background-size: 100% 100%
-  height: 993px
+
 
 .top_menu
   display: inline-block
@@ -26,6 +26,7 @@ header
   font-family: Montserrat
   font-weight: 700
   text-transform: capitalize
+  cursor: pointer
   & span
     text-transform: uppercase
 
@@ -83,7 +84,7 @@ header
 
 .central_part
   text-align: center
-  padding-bottom: 16%
+  padding-bottom: 14%
   & h2
     padding-bottom: 3%
 
@@ -103,10 +104,15 @@ header
   padding: 0.5% 1%
   border: 3px solid $white-color
   background-color: transparent
+  box-shadow: 0 3px 5px 0 rgba(241,236,236,0.69)
+  transition: box-shadow 0.3s ease-in-out
+  &:hover
+    box-shadow: 0 0 25px 12px rgba(253, 252, 252, 0.6)
 
 .item_button
   display: inline-block
   width: 100%
+  padding-bottom: 2%
 
 .item
   display: inline
@@ -145,12 +151,6 @@ header
     font-size: 1.6rem
     font-family: Montserrat
     font-weight: 700
-
-
-
-
-
-
 
 
 
