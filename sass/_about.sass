@@ -13,11 +13,55 @@
 
 .about_gallery
   display: inline-block
-
+  position: relative
 
 .about_gallery_img
-  display: inline
-  padding-right: 16px
+  display: inline-block
+  margin-right: 16px
+  z-index: -1
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(5px) translateZ(0)
+  -webkit-transition-duration: 0.5s
+  transition-duration: 0.5s
+  -webkit-transition-property: transform
+  transition-property: transform
   &:last-child
-    padding-right: 0
+    margin-right: 0
+  &:hover
+    .about_gallery_info
+      display: block
+  &:hover,
+  &:focus,
+  &:active
+    box-shadow: 10px 10px $turquoise-color
+    -webkit-transform: translateX(-10px) translateY(-10px)
+    transform: translateX(-10px) translateY(-10px)
 
+.main_image
+  position: relative
+
+.about_gallery_info
+  position: relative
+  display: none
+  z-index: 1
+  bottom: 95px
+  left: 120px
+  &:after
+    display: block
+    content: ""
+    -webkit-transition: all .5s ease-in-out
+    transition: all .5s ease-in-out
+
+.user
+  position: absolute
+  left: 55px
+  bottom: 30px
+
+.info
+  position: absolute
+  color: $white-color
+  font-family: Montserrat
+  font-size: 1.2rem
+  font-weight: 700
+  text-transform: uppercase
+  bottom: 2px
