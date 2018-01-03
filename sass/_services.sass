@@ -1,6 +1,6 @@
 .services
   width: 100%
-  padding: 109px 0 122px 0px
+  padding: 109px 0 71px 0px
 
 .services_header
   text-align: center
@@ -12,19 +12,22 @@
 
 .services_list
   position: relative
-  display: inline-block
+  display: flex
+  flex-wrap: wrap
+  width: 100%
 
 
 .services_list_item
-  width: 33%
   position: relative
-  display: inline-block
-  columns: 2 auto
+  display: flex
+  flex-wrap: wrap
   padding-bottom: 51px
-  & img
-    padding: 0 37px 100px 30px
+  width: 33%
 
-  & h5
+.services_list_img img
+  padding-right: 30px
+
+.services_list_info h5
     font-family: Montserrat
     font-size: 0.93rem
     color: $black-color
