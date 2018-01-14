@@ -6,6 +6,11 @@
   display: block
   padding: 74px 0 22px
 
+  & hr
+    color: #e5e5e5
+    height: 1px
+    background-color: #e5e5e5
+
 .footer_main
   position: relative
   width: 100%
@@ -13,9 +18,9 @@
 
 .footer_logo
   position: relative
-  width: 35%
+  width: 43%
   display: inline-block
-  padding-right: 48px
+  padding-right: 13px
   & h5
     color: #cccccc
     font-family: Montserrat
@@ -37,7 +42,6 @@
       font-size: 1rem
       font-weight: 400
       line-height: 24px
-      padding: 14px 0 14px 14px
 
     & button
       display: inline
@@ -49,7 +53,7 @@
       background-color: $turquoise-color
       padding: 15px 34px
 
-  & i
+  & h6
     color: $black-color
     font-family: Montserrat
     font-size: 0.93rem
@@ -58,6 +62,16 @@
     & span
       font-size: 1.2rem
       font-weight: 700
+
+input
+  padding: 50px 0px 20px 20px
+  &::placeholder
+    color: #cccccc
+    font-family: Roboto Italic
+    font-size: 1rem
+    font-weight: 400
+    line-height: 24px
+    padding: 50px 0 14px 14px
 
 .footer_logo_social
   position: relative
@@ -81,9 +95,8 @@
 
 .footer_blogs
   position: relative
-  width: 40%
+  width: 32%
   display: inline-block
-  padding-right: 68px
   & h5
     color: $black-color
     font-family: Montserrat
@@ -98,13 +111,32 @@
   width: 100%
   flex-wrap: wrap
   padding-bottom: 31px
+  &:last-child
+    padding-bottom: 0
 
 .footer_blogs_img
   padding-right: 20px
 
 
 .footer_blogs_info
+  display: block
+  position: relative
+  & h6
+    color: $black-color
+    font-family: Montserrat
+    font-size: 0.8rem
+    font-weight: 400
+    line-height: 18px
+    text-transform: uppercase
+    padding: 10px 0 6px 0
 
+  & p
+    color: $grey-color
+    font-family: Roboto Italic
+    font-size: 0.86rem
+    font-weight: 400
+    line-height: 24px
+    text-transform: capitalize
 
 .footer_instagram
   position: relative
@@ -118,9 +150,29 @@
     text-transform: uppercase
     padding-bottom: 40px
 
+  & p
+    color: $grey-color
+    font-family: Roboto Italic
+    font-size: 0.83rem
+    font-weight: 400
+    line-height: 24px
+    text-transform: capitalize
+
 .footer_instagram_gallery
   position: relative
   display: inline-block
   width: 100%
   padding-bottom: 28px
+
+.footer_subtitle
+  text-align: center
+  padding-top: 24px
+  color: $black-color
+  font-family: Montserrat
+  font-size: 0.93rem
+  font-weight: 400
+
+  & span
+    color: #f38181
+
 
