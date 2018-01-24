@@ -7,7 +7,9 @@
 
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="libs/font-awesome/fontawesome-all.css">
-  <script src="libs/jquery/jquery-3.2.1.min.js"></script>
+  <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+  <script src="libs/jguery/jquery-3.3.1.min.js"></script>
+  <script src="libs/jguery/numscroller-1.0.js"></script>
   <script src="index.js"></script>
 </head>
 <body>
@@ -36,6 +38,9 @@
       <div class="find_menu">
         <a href="#" class="icon"><img src="pic/icons/shopping-cart.png" alt="No" class="icon_search"></a>
         <a href="#" class="icon"><img src="pic/icons/magnifying-glass.png" alt="No" class="icon_basket"></a>
+        <div class="icon_search_form">
+          <input type="text" placeholder="Search..." class="search-form">
+        </div>
       </div>
     </div>
     <div class="central_part">
@@ -103,7 +108,7 @@
     <div class="container">
         <div class="indicators">
             <div class="cell">
-                <span>42</span>
+                <span class="numbers" data-max='42'>42</span>
                 <br>
                 <p>web design projects</p>
             </div>
@@ -247,34 +252,40 @@
             </div>
             <div class="team_gallery">
                 <div class="team_gallery_block">
-                    <img src="img/layer-16.png" alt="No">
-                    <div class="social">
-                        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <div class="team_gallery_block_img">
+                        <img src="img/layer-16.png" alt="No">
+                        <div class="social">
+                            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
                     <h5>matthew dix</h5>
                     <p>graphic design</p>
                 </div>
                 <div class="team_gallery_block">
-                    <img src="img/layer-19.png" alt="No">
-                    <div class="social">
-                        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <div class="team_gallery_block_img">
+                        <img src="img/layer-19.png" alt="No">
+                        <div class="social">
+                            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
                     <h5>christopher campbell</h5>
                     <p>branding/UX design</p>
                 </div>
                 <div class="team_gallery_block">
-                    <img src="img/layer-18.png" alt="No">
-                    <div class="social">
-                        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <div class="team_gallery_block_img">
+                        <img src="img/layer-18.png" alt="No">
+                        <div class="social">
+                            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
                     <h5>michael fertig </h5>
                     <p>developer</p>
@@ -539,53 +550,55 @@
 
   <script>
 
+      $(document).ready(function(){
+          $(".icon_search").click(function(){
+              $(".icon_search_form").animate({
+                  height: 'toggle'
+              });
+          });
+      });
 
+      // $(window).scroll(function () { // Когда страница прокручивается
+      //     var scrTop = $(window).scrollTop();
+      //     if(scrTop>$('.numbers').offset().top - $(window).height()  ) {
+      //         numAnimate();
+      //     }
+      // });
+      // function numAnimate () {
+      //     var number = 0;
+      //     setInterval(function () {
+      //         number++;
+      //         if (number<=42) { $('.numbers').text(number); };
+      //     }, 250);
+      // };
 
-      // hover item_menu
-
-      // $(".item").mouseenter(
-      //     function(){
-      //         $(this).find(".red_line").animate({width:'0px', color:'red'},'slow')
-      //     });
-      // $(".item").mouseleave(
-      //     function() {
-      //         $(this).find(".red_line").animate({width:'272px', color:'red'},'slow')
-      //     });
+      // $('.numbers').each(function() {
+      //     var $this = $(this),
+      //         countTo = $this.attr('data-count');
       //
-      // //
-
-      // $(document).ready(function () {
-      //     $('.item_hover').mouseleave(function(event) {
-      //         $('.item_hover:before').stop().animate({
-      //             width: '272px',
-      //             color: 'red'
-      //         }, 500, function() {        //animation complete
-      //             $('.item').removeClass('hovered');
+      //     $({ countNum: $this.text()}).animate({
+      //             countNum: countTo
+      //         },
+      //
+      //         {
+      //
+      //             duration: 3000,
+      //             easing:'linear',
+      //             step: function() {
+      //                 $this.text(Math.floor(this.countNum));
+      //             },
+      //             complete: function() {
+      //                 $this.text(this.countNum);
+      //                 //alert('finished');
+      //             }
+      //
       //         });
-      //     });
-      //     $('.item_hover').mouseover(function(event) {
-      //         $('.item_hover:before').stop().animate({
-      //             width: '172px',
-      //             color: 'red'
-      //         }, 300, function() {        //animation complete
-      //             $('.item_hover').addClass('hovered');
-      //         });
-      //     });
+      //
+      //
+      //
       // });
 
-      // $(document).ready(function() {
-      //     $(".item").mouseover(function() {
-      //         var line = $(".item_hover").css("background-color", "red");
-      //         line.hide(1500).show(1500);
-      //         line.queue(function() {
-      //             line.css("background-color", "transparent");
-      //         });
-      //     });
-      //     $(".item").mouseleave(function() {
-      //         var line = $(".item_hover").css("background-color", "red");
-      //         line.hide(1500);
-      //     });
-      // });
+
 
   </script>
 </body>

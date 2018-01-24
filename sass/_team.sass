@@ -14,17 +14,12 @@
 
 .team_gallery
   position: relative
-  display: block
+  display: inline-block
   width: 100%
 
 .team_gallery_block
-  position: relative
   display: inline-block
   width: 33%
-
-  & img
-    display: inline
-    z-index: 0
 
   & h5
     color: $black-color
@@ -41,44 +36,71 @@
     font-weight: 400
     text-transform: capitalize
 
-.social
+.team_gallery_block_img
   position: relative
-  display: inline-block
+  display: inline
+
+  &:hover
+    .social
+      display: inline-block
+
+  & img
+    z-index: -9999
+    -webkit-transform: perspective(1px) translateZ(0)
+    transform: perspective(5px) translateZ(0)
+    -webkit-transition-duration: 0.5s
+    transition-duration: 0.5s
+    -webkit-transition-property: transform
+    transition-property: transform
+
+    &:hover,
+    &:focus,
+    &:active
+      box-shadow: 10px 10px $turquoise-color
+      -webkit-transform: translateX(-10px) translateY(-10px)
+      transform: translateX(-10px) translateY(-10px)
 
 
-.facebook
+.social
+  display: none
+  position: absolute
+  left: 80px
+  bottom: 208px
+  background-color: #f38181
 
+  & a
+    position: relative
+    &:after
+      display: inline-block
+      content: ""
+      -webkit-transition: all .5s ease-in-out
+      transition: all .5s ease-in-out
 
 .fa-facebook-f
   padding: 15px 22px
-  background-color: #fce38a
-  color: #f38181
+
 
 .fab
-
-
-
-.twitter
-
+  margin-right: -3px
+  font-size: 1.73rem
 
 .fa-twitter
-  color: #f38181
   padding: 15px 17px
-  background-color: #fce38a
-  font-family:
-
-.pinterest
 
 
 .fa-pinterest-p
-  color: #f38181
   padding: 15px 17px
-  background-color: #fce38a
-
-.instagram
 
 
 .fa-instagram
-  color: #f38181
   padding: 15px 16px
+
+.fa-facebook-f,
+.fa-twitter,
+.fa-pinterest-p,
+.fa-instagram
   background-color: #fce38a
+  color: #f38181
+  &:hover
+    color: $white-color
+    background-color: #f38181
